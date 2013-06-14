@@ -30,7 +30,8 @@ class Pet
 
 
 	def pee	
-		if @drink > 6
+		@bathroom += @drink
+		if @bathroom > 6
 			puts "I have to pee"
 		else
 			puts "I don't need to go"
@@ -41,3 +42,6 @@ end
 critter1 = Pet.new(3,2)
 puts critter1.inspect
 critter1.feed(8)
+critter1.drink(10)
+critter1.pee
+puts critter1.inspect
